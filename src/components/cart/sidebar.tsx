@@ -1,3 +1,4 @@
+import { RocketIcon } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -5,18 +6,24 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
+import { useCartStore } from "@/stores/cart-store";
+
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { RocketIcon } from "lucide-react";
-
 export const CartSidebar = () => {
+  const { cart } = useCartStore((state) => state);
+
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button>
+        <Button className="relative">
           <RocketIcon className="mr-2" />
           <p>Carrinho</p>
+          {cart.length > 0 && (
+            <div className="absolute size-3 bg-red-600 rounded-full -right-1 -top-1"></div>
+          )}
         </Button>
       </SheetTrigger>
       <SheetContent>

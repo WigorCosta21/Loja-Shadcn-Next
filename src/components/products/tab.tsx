@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getAllProducts } from "@/services/product";
-import { Product } from "@/types/product";
+import { Product } from "@/types/Product";
 import { ProductEmpty } from "@/components/products/empty";
 import { ProductItem } from "./item";
 
