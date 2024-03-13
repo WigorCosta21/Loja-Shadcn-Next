@@ -1,3 +1,5 @@
+"use client";
+
 import { RocketIcon } from "lucide-react";
 import {
   Sheet,
@@ -11,9 +13,16 @@ import { useCartStore } from "@/stores/cart-store";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { CartItem } from "./item";
 
 export const CartSidebar = () => {
   const { cart } = useCartStore((state) => state);
+
+  let subTotal = 0;
+
+  for (let item of cart) {
+    subTotal += item.quantity * item.product.price;
+  }
 
   return (
     <Sheet>
@@ -30,19 +39,23 @@ export const CartSidebar = () => {
         <SheetHeader>
           <SheetTitle>Carrinho</SheetTitle>
         </SheetHeader>
-        <div className="flex flex-col gap-5 my-3">...</div>
+        <div className="flex flex-col gap-5 my-3">
+          {cart.map((item) => (
+            <CartItem key={item.product.id} item={item} />
+          ))}
+        </div>
 
         <Separator className="my-4" />
 
         <div className="flex justify-between items-center text-xs">
           <div>Subtotal</div>
-          <div>...</div>
+          <div>R$ {subTotal.toFixed(2)}</div>
         </div>
 
         <Separator className="my-4" />
 
         <div className="text-center">
-          <Button>Finalizar compra</Button>
+          <Button disabled={cart.length === 0}>Finalizar compra</Button>
         </div>
       </SheetContent>
     </Sheet>
