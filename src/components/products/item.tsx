@@ -35,7 +35,7 @@ export const ProductItem = ({ item }: Props) => {
       </div>
       <div className="mt-3 flex flex-col gap-2">
         <p className="text-lg">{item.name}</p>
-        <p className="text-sm opacity-50">R${item.price.toFixed(2)}</p>
+        <p className="text-sm opacity-50">R$ {item.price.toFixed(2)}</p>
         <Button variant="outline" onClick={handleAddButton}>
           Adicionar
         </Button>
