@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { Cart } from "@/types/cart";
-import { Product } from "@/types/Product";
+import { Product } from "@/types/product";
 
 type States = {
   cart: Cart[];
