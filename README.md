@@ -4,27 +4,27 @@ Este é um projeto de exemplo que inclui várias funcionalidades relacionadas a 
 
 ### Home
 
- <img src="/images/README/home.jpg" alt="Página home">
+ <img src="public/images/README/home.jpg" alt="Página home">
 
 ### Tema Light
 
- <img src="/images/README/theme-light.jpg" alt="Página tema light">
+ <img src="public/images/README/theme-light.jpg" alt="Página tema light">
 
 ### Carrinho
 
- <img src="/images/README/cart.png" alt="Carrinho de compra">
+ <img src="public/images/README/cart.png" alt="Carrinho de compra">
 
 ### Checkout name
 
- <img src="/images/README/checkout-name.png" alt="Checkout do nome">
+ <img src="public/images/README/checkout-name.png" alt="Checkout do nome">
 
 ### Checkout Endereço
 
- <img src="/images/README/checkout-address.jpg" alt="Checkout do endereço">
+ <img src="public/images/README/checkout-address.jpg" alt="Checkout do endereço">
 
 ### Checkout Finalizar pedido
 
- <img src="/images/README/checkout-finish.jpg" alt="Finalizar o pedido">
+ <img src="public/images/README/checkout-finish.jpg" alt="Finalizar o pedido">
 
 ## Funcionalidades Principais
 
